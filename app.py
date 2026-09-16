@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 # собираем строку подключения из переменных окружения
 app.config["SQLALCHEMY_DATABASE_URI"] = (
-    f"postgresql+psycopg2://{os.getenv('DB_USER')}:"
+    f"postgresql+psycopg://{os.getenv('DB_USER')}:"
     f"{os.getenv('DB_PASSWORD')}@"
     f"{os.getenv('DB_HOST')}:"
     f"{os.getenv('DB_PORT')}/"
